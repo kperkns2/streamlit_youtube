@@ -24,8 +24,8 @@ def load_data():
 df = load_data()
 
 # Show a thumbnail, title and number of views together
-
-
+st.write('hi')
+st.write(df)
 def show_thumbnail_title_views(df):
     st.write(
         f'<div style="background-color:tomato;"><p style="color:white;font-size:50px;">{df.iloc[0]["title"]}</p></div>', unsafe_allow_html=True)
