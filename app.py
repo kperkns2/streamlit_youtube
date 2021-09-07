@@ -10,10 +10,10 @@ import pandas as pd
 import streamlit as st
 # import altair as alt
 import numpy as np
-import pydeck as pdk
-import plotly.express as px
-import plotly.graph_objects as go
-import matplotlib.pyplot as plt
+# import pydeck as pdk
+# import plotly.express as px
+# import plotly.graph_objects as go
+# import matplotlib.pyplot as plt
 
 
 @st.cache
