@@ -31,3 +31,6 @@ def show_thumbnail_title_views(df):
         f'<div style="background-color:tomato;"><p style="color:white;font-size:50px;">{df.iloc[0]["title"]}</p></div>', unsafe_allow_html=True)
     st.image(df.iloc[0]['thumbnails'], use_column_width=True)
     st.write(f'<p style="font-size:20px;">{df.iloc[0]["numberOfViews"]} views</p>', unsafe_allow_html=True)
+
+
+show_thumbnail_title_views(df)
