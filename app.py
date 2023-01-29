@@ -390,7 +390,7 @@ font-size: 16px;
 font-family: Sans-Serif;
 }
 .all-text {
-line-height: 1.1;
+line-height: 1.4;
 font-size: 16px;
 font-family: Sans-Serif;
 }
@@ -404,7 +404,21 @@ font-family: Sans-Serif;
 
 st.sidebar.markdown(side_explainer_html, unsafe_allow_html=True)
 st.sidebar.text('')
-st.sidebar.button('Try it now!')
+
+col1, col2, col3 , col4, col5 = st.sidebar.beta_columns(5)
+with col1:
+    pass
+with col2:
+    pass
+with col4:
+    pass
+with col5:
+    pass
+with col3 :
+    center_button = st.sidebar.button('Try it now!')
+    
+    
+
 st.sidebar.markdown(benefits_html, unsafe_allow_html=True)
 
 st.markdown('# Unlock the full potential of your Youtube audience with our AI-powered chat technology.')
