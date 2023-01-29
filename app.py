@@ -384,7 +384,10 @@ font-family: Sans-Serif;
 st.sidebar.markdown(side_explainer_html, unsafe_allow_html=True)
 
 st.markdown('# Unlock the full potential of your Youtube audience with our AI-powered chat technology.')
-st.markdown('### Say goodbye to manual messaging and hello to seamless interactions with your entire fan base. Introducing the future of content creator-audience engagement. ')
+st.markdown('#### Say goodbye to manual messaging and hello to seamless interactions with your entire fan base. Introducing the future of content creator-audience engagement. ')
+st.markdown("""
+---
+""")
 st.markdown(examples_html, unsafe_allow_html=True)
 
 
