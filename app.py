@@ -37,7 +37,7 @@
 
 
 import streamlit as st
-html_string = """<html><head>
+examples_html = """<html><head>
     <style type="text/css">
 .comment-container {
 width: 100%;
@@ -360,7 +360,25 @@ margin-left: 20px;
     </div>
   </div></body>
 </html>"""
-st.markdown(html_string, unsafe_allow_html=True)
+
+
+side_explainer_html = """<html><head>
+    <style type="text/css">
+.desc-text {
+line-height: 1.1;
+background-color:#fdfd96;
+font-size: 12px;
+font-family: Sans-Serif;
+}
+    </style>
+</head><body><div class="desc-text"> All text highlighted in yellow is 100% computer generated 🚀
+  </div></body>
+</html>"""
+
+st.sidebar.markdown(side_explainer_html, unsafe_allow_html=True)
+st.markdown(examples_html, unsafe_allow_html=True)
+
+
 
 
 
