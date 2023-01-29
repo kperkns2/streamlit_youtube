@@ -403,8 +403,9 @@ font-family: Sans-Serif;
 
 
 st.sidebar.markdown(side_explainer_html, unsafe_allow_html=True)
+st.sidebar.text('')
 st.sidebar.button('Try it now!')
-st.sidebar.markdown('')
+st.sidebar.markdown(benefits_html, unsafe_allow_html=True)
 
 st.markdown('# Unlock the full potential of your Youtube audience with our AI-powered chat technology.')
 st.markdown("""
