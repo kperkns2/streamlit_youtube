@@ -73,7 +73,7 @@ margin-top: -15px;
 margin-left: 60px;
 width: 90%;
 line-height: 1.1;
-background-color:#eeee66;
+background-color:#fdfd96;
 }
 .replies {
 margin-top: 5px;
