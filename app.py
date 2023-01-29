@@ -367,11 +367,16 @@ side_explainer_html = """<html><head>
 .desc-text {
 line-height: 1.1;
 background-color:#fdfd96;
-font-size: 12px;
+font-size: 16px;
+font-family: Sans-Serif;
+}
+.all-text {
+line-height: 1.1;
+font-size: 16px;
 font-family: Sans-Serif;
 }
     </style>
-</head><body><div class="desc-text"> All text highlighted in yellow is 100% computer generated 🚀
+</head><body><div class="all-text"> All <span class="desc-text">Text Highlighted in Yellow </span> is 100% Computer Generated 🚀
   </div></body>
 </html>"""
 
