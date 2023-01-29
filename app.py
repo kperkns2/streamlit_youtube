@@ -381,11 +381,35 @@ font-family: Sans-Serif;
 </html>"""
 
 
+benefits_html = """<html><head>
+    <style type="text/css">
+.green-text {
+color:#f228B22;
+line-height: 1.1;
+font-size: 16px;
+font-family: Sans-Serif;
+}
+.all-text {
+line-height: 1.1;
+font-size: 16px;
+font-family: Sans-Serif;
+}
+    </style>
+</head><body><div class="all-text"> <div> ✅ Saves hours of writing</div> <div> ✅ Improves YouTube Analytics</div>  <div> ✅ Builds Audience Loyalty</div> </div></body>
+</html>"""
+
+
+
+
+
 st.sidebar.markdown(side_explainer_html, unsafe_allow_html=True)
+st.sidebar.button('Try it now!')
+st.sidebar.markdown('')
+
+st.markdown('# Unlock the full potential of your Youtube audience with our AI-powered chat technology.')
 st.markdown("""
 ---
 """)
-st.markdown('# Unlock the full potential of your Youtube audience with our AI-powered chat technology.')
 st.markdown('#### Say goodbye to manual messaging and hello to seamless interactions with your entire fan base. Introducing the future of content creator-audience engagement. ')
 st.markdown("""
 ---
