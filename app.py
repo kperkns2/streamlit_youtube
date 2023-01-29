@@ -405,7 +405,7 @@ font-family: Sans-Serif;
 st.sidebar.markdown(side_explainer_html, unsafe_allow_html=True)
 st.sidebar.text('')
 
-col1, col2, col3 , col4, col5 = st.sidebar.beta_columns(5)
+col1, col2, col3 , col4, col5 = st.sidebar.columns(5)
 with col1:
     pass
 with col2:
