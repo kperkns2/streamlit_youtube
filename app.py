@@ -412,17 +412,53 @@ font-family: Sans-Serif;
 st.sidebar.markdown(side_explainer_html, unsafe_allow_html=True)
 st.sidebar.text('')
 
-col1, col2, col3 , col4, col5 = st.sidebar.columns(5)
-with col1:
-    pass
-with col2:
-    pass
-with col4:
-    pass
-with col5:
-    pass
-with col3 :
-    center_button = st.sidebar.button('Try it now!')
+
+
+import streamlit as st
+import google.auth
+import google.auth.transport.requests
+import google.auth.oauthlib.flow
+import google.api_core.exceptions
+import googleapiclient.discovery
+
+creds = None
+
+def authenticate_youtube():
+    global creds
+    # Get credentials from google API
+    scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
+    flow = google.auth.oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
+        "client_secret.json", scopes)
+    creds = flow.run_local_server()
+
+def comment_response(text):
+    # Connect to youtube API
+    youtube = googleapiclient.discovery.build("youtube", "v3", credentials=creds)
+
+    # Perform the comment response action
+    request = youtube.comments().insert(
+        part="snippet",
+        body=dict(
+            snippet=dict(
+                videoId="video_id",
+                textOriginal=text,
+            )
+        )
+    )
+    response = request.execute()
+
+st.sidebar.title("YouTube Comment Response")
+if not creds:
+    if st.sidebar.button("Authenticate with Youtube API"):
+        authenticate_youtube()
+else:
+    comment_text = st.sidebar.text_input("Enter your comment")
+    if st.sidebar.button("Respond"):
+        comment_response(comment_text)
+        st.success("Comment responded with boilerplate text")
+        
+        
+        
     
     
 
