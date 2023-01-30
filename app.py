@@ -427,7 +427,7 @@ def authenticate_youtube():
     global creds
     # Get credentials from google API
     scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
-    flow = google.auth.oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
+    flow = flow.InstalledAppFlow.from_client_secrets_file(
         "client_secret.json", scopes)
     creds = flow.run_local_server()
 
