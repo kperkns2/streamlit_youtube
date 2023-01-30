@@ -395,9 +395,16 @@ font-size: 16px;
 font-family: Sans-Serif;
 }
     </style>
-</head><body><div class="all-text"> <div> ✅ Saves hours of writing</div> <div> ✅ Improves YouTube Analytics</div>  <div> ✅ Builds Audience Loyalty</div> </div></body>
+</head><body><div class="all-text">
+<div>💬 Enhance Fan Engagement</div>
+<div>🤖 AI-Powered Tools</div>
+<div>💥 Boost Comment Interaction</div>
+<div>🚀 Automate Comment Moderation</div>
+<div>📈 Increase YouTube Success</div>
+<div>🕰️ Time-Saving Solutions</div>
+<div>💪 Build Fan Loyalty</div>
+</div></body>
 </html>"""
-
 
 
 
