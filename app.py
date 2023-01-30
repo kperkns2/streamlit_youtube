@@ -431,22 +431,43 @@ def authenticate_youtube():
         "client_secret.json", scopes)
     creds = flow.run_local_server()
 
-def comment_response(text):
+# def comment_response(text):
+#     # Connect to youtube API
+#     youtube = googleapiclient.discovery.build("youtube", "v3", credentials=creds)
+
+#     # Perform the comment response action
+#     request = youtube.comments().insert(
+#         part="snippet",
+#         body=dict(
+#             snippet=dict(
+#                 videoId="video_id",
+#                 textOriginal=text,
+#             )
+#         )
+#     )
+#     response = request.execute()
+
+
+def comment_response():
     # Connect to youtube API
     youtube = googleapiclient.discovery.build("youtube", "v3", credentials=creds)
 
-    # Perform the comment response action
-    request = youtube.comments().insert(
+    # Get a list of all comments from the channel
+    request = youtube.commentThreads().list(
         part="snippet",
-        body=dict(
-            snippet=dict(
-                videoId="video_id",
-                textOriginal=text,
-            )
-        )
+        channelId="UCOMo_p1Pgfy7KzdlaICY7jQ",
+        textFormat="plainText"
     )
     response = request.execute()
 
+    comments = []
+    for item in response["items"]:
+        comments.append(item["snippet"]["topLevelComment"]["snippet"]["textDisplay"])
+    st.sidebar.write(comments)
+    return comments
+        
+    
+    
 st.sidebar.title("YouTube Comment Response")
 if not creds:
     if st.sidebar.button("Authenticate with Youtube API"):
@@ -457,6 +478,8 @@ else:
         comment_response(comment_text)
         st.success("Comment responded with boilerplate text")
         
+        
+
         
         
     
